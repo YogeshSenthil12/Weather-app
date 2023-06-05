@@ -43,7 +43,7 @@ showWeatherData = (weatherData, errorMessage) => {
         document.getElementById("maxTemp").innerText = `Max Temp: ${weatherData.main.temp_max} °C`;
         document.getElementById("Humidity").innerText = `Humidity: ${weatherData.main.humidity} %`;
         document.getElementById("windSpeed").innerText = `windSpeed: ${weatherData.wind.speed} km/h`;
-        document.getElementById("seaLevel").innerText = `seaLevel: ${weatherData.main.sea_level} mts above`;
+        document.getElementById("seaLevel").innerText = `seaLevel: ${weatherData.main.sea_level  ? weatherData.main.sea_level +'mts above' : '-'}`;
     }
 
     const weatherDataContainer = document.querySelector(".weatherInfo");
